@@ -52,8 +52,8 @@ class NotesViewModel(
                 }
                 _state.update {
                     it.copy(
-                        title = mutableStateOf("null"),
-                        description = mutableStateOf("null")
+                        title = mutableStateOf(""),
+                        description = mutableStateOf("")
                     )
                 }
             }

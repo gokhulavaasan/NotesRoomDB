@@ -6,6 +6,6 @@ import com.gvapps.notesroom.data.Note
 
 data class NoteState(
     val notes: List<Note> = emptyList(),
-    val title: MutableState<String> = mutableStateOf("null"),
-    val description: MutableState<String> = mutableStateOf("null")
+    val title: MutableState<String> = mutableStateOf(""),
+    val description: MutableState<String> = mutableStateOf("")
 )

@@ -66,4 +66,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
     //Extended Icon
     implementation("androidx.compose.material:material-icons-extended-android:1.7.4")
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.8.3")
 }
