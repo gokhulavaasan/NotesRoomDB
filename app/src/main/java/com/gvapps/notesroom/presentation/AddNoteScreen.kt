@@ -1,10 +1,12 @@
 package com.gvapps.notesroom.presentation
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material3.FloatingActionButton
@@ -21,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 fun AddNoteScreen(
     state: NoteState,
     navController: NavController,
@@ -41,12 +44,14 @@ fun AddNoteScreen(
             ) {
                 Icon(imageVector = Icons.Default.Save, contentDescription = null)
             }
-        }
+        },
+        modifier = Modifier
+            .imePadding()
+            .statusBarsPadding()
     ) { padddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .imePadding()
         ) {
             TextField(
                 value = state.title.value,
